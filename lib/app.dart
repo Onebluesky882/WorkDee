@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/features/home/view/Homepage.dart';
 // import 'package:flutter_projects/features/auth/view/login_page.dart';
 // import 'package:flutter_projects/features/home/view/home_page.dart';
 
@@ -15,11 +16,12 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
       ),
       // Routing แบบง่าย
-      initialRoute: '/login',
-      routes: {
-        // '/login': (context) => const LoginPage(),
-        // '/home': (context) => const HomePage(),
-      },
+      // initialRoute: '/login',
+      // routes: {
+      //   '/login': (context) => const LoginPage(),
+      //   '/home': (context) => const HomePage(),
+      // },
+      home: Homepage(),
     );
   }
 }
