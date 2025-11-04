@@ -1,16 +1,42 @@
-# flutter_projects
+# learn flutter
 
-A new Flutter project.
+💡 ระดับต่อไปที่คุณสามารถฝึกต่อได้
 
-## Getting Started
+ตอนนี้คุณอยู่ในระดับ เข้าใจ Flutter UI และ Widget composition ได้ดีแล้ว
+ขั้นต่อไปคือ:
 
-This project is a starting point for a Flutter application.
+# StatefulWidget StatelessWidget— เรียนรู้การจัดการ state ภายใน widget ✅
 
-A few resources to get you started if this is your first Flutter project:
+State management — เช่น Provider, Riverpod, หรือ Bloc
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Layout system — ใช้ Row, Column, Stack, Expanded, Flexible อย่างคล่อง
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Expanded พื้่นที่ว่าง ใช้ ขยาย widget ให้กิน “พื้นที่ว่างที่เหลือทั้งหมด”
+
+ใช้เฉพาะใน Row หรือ Column เท่านั้น
+
+- Flexible แต่ปรับแต่งได้ เหมือน Expanded แต่ ควบคุมได้ละเอียดกว่า
+
+มีพารามิเตอร์ fit:
+
+FlexFit.tight → เหมือน Expanded (ยืดเต็มที่)
+
+FlexFit.loose → ยืดได้ “เท่าที่ลูกต้องการ”
+
+📐 เหมาะเมื่ออยากให้ widget “ยืดได้แต่ไม่บังคับเต็ม”
+
+- stack วาง object ทับกันได้
+
+## Theming & styling — ใช้ Theme.of(context) หรือ MaterialStateProperty
+
+Navigation & routes — ใช้ Navigator.push / go_router
+
+Animations — เข้าใจ AnimatedContainer, Tween, AnimationController
+
+CustomPainter / ClipPath — เพื่อสร้าง UI แบบเฉพาะตัว
+
+# Tip: ถ้าเจอ layout error
+
+ใช้คำสั่งนี้ใน debug console:
+
+debugPrintRenderTree();
