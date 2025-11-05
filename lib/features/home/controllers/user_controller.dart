@@ -1,18 +1,19 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_projects/features/home/validation/validation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 typedef UserFormState = ({
   String name,
-  int age,
+  String age,
   String phone,
   Map<String, String?> errors,
 });
 
 class UserFormNotifier extends Notifier<UserFormState> {
   @override
-  UserFormState build() => (age: 0, name: '', phone: '', errors: {});
+  UserFormState build() => (age: '', name: '', phone: '', errors: {});
 
-  void update({String? name, int? age, String? phone}) {
+  void update({String? name, String? age, String? phone}) {
     state = (
       name: name ?? state.name,
       age: age ?? state.age,
@@ -29,18 +30,26 @@ class UserFormNotifier extends Notifier<UserFormState> {
     });
 
     if (result.success) {
-      print('✅ Valid: ${result.data}');
-    } else {
-      print('❌ Errors: ${result.error!.issues}');
-    }
+      state = (
+        name: state.name,
+        age: state.age,
+        phone: state.phone,
+        errors: {},
+      );
+      debugPrint(' age field:$state');
 
-    // ไม่มี error
-    state = (name: state.name, age: state.age, phone: state.phone, errors: {});
-    return true;
+      return true;
+    } else {
+      final errors = {for (final e in result.error!.issues) e.path: e.message};
+
+      debugPrint('❌ Errors: $errors');
+
+      return false;
+    }
   }
 
   void reset() {
-    state = (age: 0, name: '', phone: '', errors: {});
+    state = (age: '', name: '', phone: '', errors: {});
   }
 }
 
