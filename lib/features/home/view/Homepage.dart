@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/common/constants/colors.dart';
 import 'package:flutter_projects/features/home/controllers/riverpod.dart';
-import 'package:flutter_projects/features/home/controllers/user_controller.dart';
 import 'package:flutter_projects/features/home/widgets/footer_mobile.dart';
 import 'package:flutter_projects/features/home/widgets/right_menu.dart';
-import 'package:flutter_projects/features/home/widgets/user_field.dart';
+import 'package:flutter_projects/features/home/widgets/user_form.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class Homepage extends ConsumerWidget {
@@ -13,8 +12,6 @@ class Homepage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final text = ref.watch(customStateProvider);
-    final result = ref.watch(userFormProvider);
-    debugPrint('result form :$result');
     return Scaffold(
       backgroundColor: kBackgroundColor,
       appBar: AppBar(
@@ -35,7 +32,7 @@ class Homepage extends ConsumerWidget {
       body: Column(
         children: [
           Text(text),
-          ProfilePage(),
+          UserForm(),
           // GlobalState(onChanged: (_) => notifier.setText('wi ')),
         ],
       ),

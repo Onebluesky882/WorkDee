@@ -36,7 +36,6 @@ class UserFormNotifier extends Notifier<UserFormState> {
         phone: state.phone,
         errors: {},
       );
-      debugPrint(' age field:$state');
 
       return true;
     } else {
