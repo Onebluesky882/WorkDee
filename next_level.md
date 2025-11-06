@@ -49,3 +49,32 @@ StateNotifier + Riverpod (สำหรับ business logic แยกจาก U
 Feature-based folder structure
 
 Separation of concerns (UI / State / Model / Repository)
+
+2️⃣ สิ่งที่ควรเสริมก่อนสมัครงาน
+
+Animation / Motion → AnimatedContainer, Tween, Hero
+
+CustomPainter / UI เฉพาะตัว → ทำ UI แตกต่างจาก Material widget
+
+Form & Validation → TextFormField + validation logic
+
+Performance / Optimization → Keys, rebuild optimization, lazy loading
+
+Testing → Widget test, Unit test, Integration test
+
+Project Architecture → Feature folder, separation UI / State / Model / Repository
+
+สิ่งเหล่านี้ไม่จำเป็นต้องเชี่ยวชาญทุกอย่าง แต่ถ้าเข้าใจพื้นฐาน + ทำได้จะช่วยให้ ทำงานจริงเร็วและโค้ด maintainable
+
+3. ศึกษา Flutter packages ยอดนิยม
+
+go_router, dio, flutter_riverpod, shared_preferences, flutter_hooks, cached_network_image
+
+4. เข้าใจ App Lifecycle และ Platform Integration
+
+Push notifications, local storage, background fetch
+
+💡 สรุป
+
+คุณ พร้อมทำงาน Flutter ในระดับ Junior – Junior+ ได้แล้ว
+ถ้าฝึกทำ mini project จริง, เข้าใจ API + State + Routing + Layout, พร้อม Portfolio, คุณสามารถสมัครงาน Flutter ได้ทันที

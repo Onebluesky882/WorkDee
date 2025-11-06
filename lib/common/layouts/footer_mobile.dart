@@ -1,8 +1,10 @@
-import 'package:flutter/material.dart';
 import 'dart:ui';
 
-class FooterMobile extends StatelessWidget {
-  const FooterMobile({super.key});
+import 'package:flutter/material.dart';
+
+class BottomNav extends StatelessWidget {
+  final BottomNavigationBar? bottomNavigationBar;
+  const BottomNav({super.key, this.bottomNavigationBar});
 
   @override
   Widget build(BuildContext context) {

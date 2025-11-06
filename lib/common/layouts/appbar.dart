@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_projects/common/widgets/appBar/right_menu.dart';
+
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CustomAppBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      title: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('WorkDee', style: TextStyle(fontWeight: FontWeight.normal)),
+        ],
+      ),
+
+      // Left side icon (leading)
+      leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
+
+      // Right menu
+      actions: const [RightMenu()],
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}

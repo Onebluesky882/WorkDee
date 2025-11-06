@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/features/home/controllers/user_controller.dart';
-import 'package:flutter_projects/features/home/widgets/custom_form.dart';
+import 'package:flutter_projects/features/jobDashboard/controller/user_controller.dart';
+import 'package:flutter_projects/features/jobDashboard/widgets/custom_form.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class UserForm extends ConsumerWidget {
