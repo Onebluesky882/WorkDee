@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/features/jobDashboard/controller/user_controller.dart';
-import 'package:flutter_projects/features/jobDashboard/type/index.dart';
+import 'package:flutter_projects/common/form/controller/user_controller.dart';
+import 'package:flutter_projects/common/form/type/index.dart';
 
 class CustomForm extends StatelessWidget {
   final String hintText;

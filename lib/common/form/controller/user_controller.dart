@@ -1,5 +1,5 @@
+import 'package:flutter_projects/common/form/type/index.dart';
 import 'package:flutter_projects/common/validation/user_validation.dart';
-import 'package:flutter_projects/features/jobDashboard/type/index.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class UserFormNotifier extends Notifier<UserFormState> {

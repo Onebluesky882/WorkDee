@@ -1,22 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/common/layouts/main.layout.dart';
-import 'package:flutter_projects/features/home/controllers/riverpod.dart';
-import 'package:flutter_projects/features/jobDashboard/widgets/user_form.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class Homepage extends ConsumerWidget {
+class Homepage extends StatelessWidget {
   const Homepage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final text = ref.watch(customStateProvider);
+  Widget build(BuildContext context) {
     return MainLayout(
-      body: Column(
-        children: [
-          Text(text),
-          UserForm(),
-          // GlobalState(onChanged: (_) => notifier.setText('wi ')),
-        ],
+      body: Padding(
+        padding: EdgeInsets.all(8),
+        child: Row(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.blueAccent),
+              ),
+              height: 300,
+              alignment: Alignment.center,
+              child: const Text('Box 1 - height 300'),
+            ),
+            SizedBox(width: 8), // ช่องว่างระหว่างกล่อง
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.green),
+              ),
+              height: 300,
+              alignment: Alignment.center,
+              child: const Text('Box  '),
+            ),
+          ],
+        ),
       ),
     );
   }

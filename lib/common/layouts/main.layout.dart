@@ -17,7 +17,7 @@ class MainLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: AppColors.lightBG,
       appBar: CustomAppBar(),
       body: body,
       bottomNavigationBar: BottomNav(),

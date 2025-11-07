@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/features/jobDashboard/widgets/user_form.dart';
+import 'package:flutter_projects/common/form/widgets/user_form.dart';
 
 class MyWidget extends StatelessWidget {
   const MyWidget({super.key});
