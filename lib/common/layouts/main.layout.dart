@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/common/constants/colors.dart';
 import 'package:flutter_projects/common/layouts/appbar.dart';
 import 'package:flutter_projects/common/layouts/footer_mobile.dart';
 
@@ -17,7 +16,6 @@ class MainLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.lightBG,
       appBar: CustomAppBar(),
       body: body,
       bottomNavigationBar: BottomNav(),
