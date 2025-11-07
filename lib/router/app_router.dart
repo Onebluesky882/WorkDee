@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/features/home/page/Homepage.dart';
+import 'package:flutter_projects/features/Started.dart';
 import 'package:flutter_projects/features/splash.dart';
 import 'package:go_router/go_router.dart';
 
@@ -11,7 +11,7 @@ final appRouter = GoRouter(
       path: '/',
       pageBuilder: (context, state) => CustomTransitionPage(
         key: state.pageKey,
-        child: const Homepage(),
+        child: const Started(),
         transitionsBuilder: slide,
         transitionDuration: const Duration(milliseconds: 800),
       ),
