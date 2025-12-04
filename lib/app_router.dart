@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_projects/common/constants/theme.dart';
+import 'package:flutter_projects/employer_main/feature/add_job/post-job.dart';
+import 'package:flutter_projects/features/home/page/home_page.dart';
+import 'package:go_router/go_router.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,6 +15,21 @@ class MyApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.light,
+      routerConfig: _router,
     );
   }
 }
+
+final GoRouter _router = GoRouter(
+  initialLocation: '/',
+  routes: [
+    ShellRoute(
+      builder: (context, state, child) => Scaffold(body: child),
+
+      routes: [
+        GoRoute(path: '/', builder: (context, state) => Homepage()),
+        GoRoute(path: '/post-job', builder: (context, state) => PostJob()),
+      ],
+    ),
+  ],
+);
