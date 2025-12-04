@@ -3,7 +3,7 @@ import 'package:flutter_projects/common/constants/theme.dart';
 import 'package:flutter_projects/common/layouts/app_bar.dart';
 import 'package:flutter_projects/common/layouts/footer.dart';
 import 'package:flutter_projects/employee/job-board/job-board.dart';
-import 'package:flutter_projects/features/home/page/home_page.dart';
+import 'package:flutter_projects/homepage.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter extends StatelessWidget {
