@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/features/api/supabase.dart';
+import 'package:go_router/go_router.dart';
 
-class Homepage extends StatefulWidget {
+class Homepage extends StatelessWidget {
   const Homepage({super.key});
 
   @override
-  State<Homepage> createState() => _HomepageState();
-}
-
-class _HomepageState extends State<Homepage> {
-  final textController = TextEditingController();
-  @override
   Widget build(BuildContext context) {
-    return FloatingActionButton(
+    return ElevatedButton(
       onPressed: () {
-        showAddNewNoteDialog(
-          context: context,
-          textController: textController,
-          onSaved: () {},
-        );
+        context.go('signup');
       },
-      child: Icon(Icons.abc),
+      child: Text('data'),
     );
   }
 }
