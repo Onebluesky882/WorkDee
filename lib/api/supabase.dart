@@ -16,7 +16,7 @@ void showAddNewNoteDialog({
 }) {
   showDialog(
     context: context,
-    builder: (context) => AlertDialog(
+    builder: (dialogContext) => AlertDialog(
       content: TextField(controller: textController),
       actions: [
         TextButton(
@@ -24,7 +24,10 @@ void showAddNewNoteDialog({
           onPressed: () async {
             await saveNote(textController.text);
             await onSaved();
-            Navigator.pop(context);
+
+            if (dialogContext.mounted) {
+              Navigator.pop(dialogContext); // <-- ใช้ dialogContext
+            }
             textController.clear();
           },
         ),
